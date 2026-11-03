@@ -15,18 +15,18 @@ export const Products = () => {
             </select>
         </header>
         <div className="grid grid-cols-4 gap-4 p-5">
-            <ProductCard item="Pasta" image="pasta.png" price="$15.00"/>
-            <ProductCard item="Dahipuri" image="dahipuri.png" price="$12.00"/>
-            <ProductCard item="Maxican Tacos" image="roll.png" price="$20.00"/>
-            <ProductCard item="Chowmin" image="chowmin.png" price="$15.00"/>
-            <ProductCard item="Potato Fries" image="fries.png" price="$8.00"/>
-            <ProductCard item="Grilled Pork Chop" image="Meat.png" price="$25.00"/>
-            <ProductCard item="Fresh Salad" image="salad.png" price="$10.00"/>
-            <ProductCard item="Fried Chicken" image="friedchicken.png" price="$16.00"/>
-            <ProductCard item="Chocolate Pestry" image="cake.png" price="$8.00"/>
-            <ProductCard item="Chicken Salad" image="chickensalad.png" price="$18.00"/>
-            <ProductCard item="Veg Thali" image="thali.png" price="$25.00"/>
-            <ProductCard item="Continental Food" image="continental.png" price="$35.00"/>
+            <ProductCard item="Pasta" image="pasta.png" price="$65.00"/>
+            <ProductCard item="Dahipuri" image="dahipuri.png" price="$62.00"/>
+            <ProductCard item="Maxican Tacos" image="roll.png" price="$70.00"/>
+            <ProductCard item="Chowmin" image="chowmin.png" price="$65.00"/>
+            <ProductCard item="Potato Fries" image="fries.png" price="$58.00"/>
+            <ProductCard item="Grilled Pork Chop" image="Meat.png" price="$75.00"/>
+            <ProductCard item="Fresh Salad" image="salad.png" price="$60.00"/>
+            <ProductCard item="Fried Chicken" image="friedchicken.png" price="$56.00"/>
+            <ProductCard item="Chocolate Pestry" image="cake.png" price="$58.00"/>
+            <ProductCard item="Chicken Salad" image="chickensalad.png" price="$68.00"/>
+            <ProductCard item="Veg Thali" image="thali.png" price="$55.00"/>
+            <ProductCard item="Continental Food" image="continental.png" price="$85.00"/>
 
         </div>
 

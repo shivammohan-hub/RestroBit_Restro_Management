@@ -4,6 +4,10 @@ export const Billings = () => {
 
     const [count, setCount] = useState(1);
     const [num, setnum] = useState(1);
+    const subtotal = (count * 60) + (num * 75) ;
+    const discount = subtotal * 0.10 ;
+    const total = subtotal - discount ;
+
     
   return (
     <div className="w-4/12 bg-gray-50 rounded-lg border mr-5 py-5 flex flex-col gap-4">
@@ -28,10 +32,10 @@ export const Billings = () => {
                     </svg>
                 </button>
             </div>
-            <p className="text-rose-500 font-semibold text-md" >$10 * {count} = ${count*10}.00</p>
+            <p className="text-rose-500 font-semibold text-md">$60 * {count} = ${count * 60}.00</p>
             <div className="flex justify-between items-center">
                 <span className="flex gap-6 items-center font-semibold">
-                    <button onClick={() => setCount(count - 1)} className="bg-gray-100 text-black rounded-full h-7 w-7">-</button>
+                    <button onClick={() => {if (count > 1) {setCount(count - 1)} }} className="bg-gray-100 text-black rounded-full h-7 w-7">-</button>
                     <h5>{count}</h5>
                     <button onClick={() => setCount(count + 1)} className="bg-orange-500 text-white rounded-full h-7 w-7">+</button>
                 </span>
@@ -48,7 +52,7 @@ export const Billings = () => {
                     </svg>
                 </button>
             </div>
-            <p className="text-rose-500 font-semibold text-md">$25 * {num} = ${num*25}.00</p>
+            <p className="text-rose-500 font-semibold text-md">$75 * {num} = ${num * 75}.00</p>
             <div className="flex justify-between items-center">
                 <span className="flex gap-6 items-center font-semibold">
                     <button onClick={() => setnum(num - 1)} className="bg-gray-100 text-black rounded-full h-7 w-7">-</button>
@@ -62,11 +66,11 @@ export const Billings = () => {
         <ol className="px-5 flex flex-col gap-2">
             <ul className="flex items-center justify-between font-medium text-slate-800">
                 <li>Sub total :</li>
-                <li>{(num*25)+(count*10)}$</li>
+                <li>{subtotal}$</li>
             </ul>
             <ul className="flex items-center justify-between font-medium text-slate-800">
                 <li>Product Discount :</li>
-                <li>150$</li>
+                <li>10%</li>
             </ul>
             <ul className="flex items-center justify-between font-medium text-slate-800">
                 <li>Extra Discount :</li>
@@ -74,13 +78,13 @@ export const Billings = () => {
             </ul>
             <ul className="flex items-center justify-between font-black">
                 <li>Total :</li>
-                <li>4000$</li>
+                <li>{total}$</li>
             </ul>
         </ol>
 
         <div className="pt-6 pb-2 px-5 flex flex-col gap-2 border-t">
             <span className="flex gap-3 text-xs">
-                <button className="flex-1 border rounded-lg bg-slate-800 py-2.5 text-white font-semibold">KOT & Print</button>
+                <button onClick={() => window.print()} className="flex-1 border rounded-lg bg-slate-800 py-2.5 text-white font-semibold">KOT & Print</button>
                 <button className="w-20 border rounded-lg bg-green-600 py-2.5 text-white font-semibold">Draft</button>
             </span>
             <span className="flex gap-3 text-xs">
